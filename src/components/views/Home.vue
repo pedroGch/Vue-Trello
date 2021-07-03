@@ -25,7 +25,21 @@
 import BoardCard from '@/components/BoardCard'
 export default {
   name:'home-view',
-  components: {BoardCard}
+  components: {BoardCard},
+  data(){
+    return{
+      boardName: '',
+      boards: [
+        { id: 1, name:'Tareas' },
+        { id: 2, name:'Lista de la compra' }
+      ]
+    }
+  },
+  methods: {
+    add(){
+      this.boards.push({name: this.boardName})
+    }
+  }
 }
 </script>
 
